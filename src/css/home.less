@@ -1,0 +1,472 @@
+body{margin:0;padding: 0;background: #f7f7f7;font-family: 'microsoft yahei', arial, sans-serif;}
+img{border:0}
+ul{padding:0;margin:0}
+li{list-style: none;display: inline-block}
+h2{
+    padding: .4rem 0;
+    text-align: center;
+    font-size: 1pc;
+    color: #000;
+    border-bottom: 1px solid #eee;
+}
+@white: #fff;
+@background: #efeff4;
+@black:#000;
+@gray-3:#333;
+@gray-6:#666;
+@gray-e0:#e0e0e0;
+@red: #d73940;
+
+
+.wrap{
+    width: 100%;
+    .tab_header{
+        position:fixed;
+        top:0px;
+        width:100%;
+        height: 40px;
+        background:@gray-e0;
+        font-size: 14px;
+        z-index: 20;
+        .header_loader{
+            position: absolute;
+            left:10px;
+            top:10px;
+        }
+        .header_btn{
+            position: absolute;
+            right:10px;
+            top:10px;
+            border-left: 1px solid @gray-6;
+            padding-left:10px;
+        }
+    }
+    .tab_content{
+        margin-top:40px;
+        width: 100%;
+        .goods_item{
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            background: lightcoral;
+            img{
+                position:absolute;
+                left: 50%;
+                top: 10px;
+                margin-left: -50px;
+                width: 100px;
+                height:100px;
+                overflow: hidden;
+                border: 1px solid #333;
+            }
+            .goods_item_infor{
+                margin:120px 10px 0;
+                font-size: 14px;
+
+                .item_name{
+                    //超出两行打点
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    word-break: break-all;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .goods_infor_wrap{       //开始设置了bottom:0;与浏览器一样高，会撑开 
+        position: absolute;
+        top: 40px;
+        background: @gray-e0;
+        width: 100%;
+        z-index: 10;
+        .infor_wrap{
+            background: @white;
+        }
+        .infor_one{
+            img{
+                width:100%;
+            }
+            .one_wrap{
+                margin:0 10px;
+                .one_price{
+                    color: @red;
+                    padding: 10px 0;
+                }
+            }
+        }
+        .infor_two{
+            p{
+                position: relative;
+                padding: 10px 0;
+                margin: 0 10px;
+                span{
+                    position: absolute;
+                    right: 10px;
+                }
+            }
+        }
+        .infor_th{
+            p{
+                margin: 10px 10px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .infor_fo{
+            width: 100%;
+            background: @red;
+            text-align: center;
+            padding: 10px 0;
+            a{
+                color: @white;
+                text-decoration:none;
+            }
+        }
+        .buy_wrap{
+            position:fixed;
+            top: 40px;
+            bottom: 0;
+            width: 100%;
+            .buy_gray{
+                position: absolute;
+                top: 0px;
+                bottom: 0;
+                width: 100%;
+                background: #000;
+                opacity: 0.6;
+            }
+            .buy_content{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: @white;
+                .buy_content_item{
+
+                    border-bottom: 1px solid @gray-6;
+                    padding: 0 10px;
+                    .buy_left{
+                        position: absolute;
+                        padding:10px 10px 10px 0;
+                    }
+                }
+                .buy_price{
+                    position: relative;
+                  
+                    .buy_price_wrap{            
+                        padding: 10px 0;
+                        margin-left: 50px;
+                        .price_value{
+                            color: @red;
+                        }
+                        .price_quantity{           //价格区间
+                            font-size: 12px;
+                            color: @gray-6;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .buy_spect{
+                    position: relative;
+                   
+                    .buy_spect_wrap{
+                        padding: 10px 0;
+                        margin-left: 50px;
+                        ul{
+
+                            li{
+                                padding: 5px;
+                                border: 1px solid @red;
+                                margin:5px;
+                                border-radius: 4px;
+                            }
+                            .buy_spect_gray{
+                                background: @gray-6;    //规格为零的灰色
+                                border: none;              //本来有个红色的边框，这里是去掉
+                            }
+                            .buy_spect_active{
+                                background: @red;
+                                color: @white;
+                            }
+        
+                        }
+                    }
+                }
+                .buy_number{
+                    position: relative;
+                    .buy_number_wrap{
+                        padding: 10px 0;
+                        margin-left: 50px;
+                        ul{
+                            width: 100px;
+                            margin-left: auto;
+                            li{
+                                width: 30px;
+                                height: 30px;
+                                background: @gray-e0;
+                                text-align: center;
+                                line-height: 30px;
+                            }
+                            .buy_number_value{
+                                background: @white;
+                            }
+                        }
+                    }
+                }
+                .buy_ok{
+                     width: 100%;
+                    background: @red;
+                    text-align: center;
+                    padding: 10px 0;
+                    a{
+                        color: @white;
+                        text-decoration:none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.submit_wrap{
+    .content{
+        .content_one{
+            border-bottom: 1px solid @gray-6;
+            p{
+                color:@gray-6;
+                padding: 0px 10px;
+            }
+        }
+        .content_two{
+            position: relative;
+            border-bottom: 1px solid @gray-6;
+            padding: 0 10px;
+            p{
+                padding: 0;
+                margin: 0;
+            }
+            .name_phone{
+                margin-top: 10px;
+                font-weight: 700;
+                font-size: 20px;
+               
+                .phone{
+                    margin-left: 30px;
+                }
+            }
+            
+            .address{
+                padding: 10px 0;
+            }
+            .icon{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -10px;
+            }
+        }
+        .content_th{
+            position: relative;
+            border-bottom: 1px solid @gray-6;
+            img{
+                position: absolute;
+                top:10px;
+                left: 10px;
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+            }
+            .content_th_info{
+                margin-left: 100px;
+                margin-top: 10px;
+                p{
+                    padding: 0;
+                    margin: 0;
+                }
+                .th_one{
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 10px 10px 10px 0;
+                    .th_one_name{
+                        float: left;
+                    }
+                    .th_one_price{
+                        float: right;
+                    }
+                }
+                .th_two{
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 10px 10px 10px 0;
+                    color: @gray-6;
+                    .th_two_spect{
+                        float: left;
+                    }
+                    .th_two_number{
+                        float: right;
+                    }
+                }
+                
+            }
+        }
+        .content_fo{
+            border-bottom: 1px solid @gray-6;
+                    p{
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                       height: 30px;
+                       .pay_title{
+                           float: left;
+                       } 
+                       .pay_money{
+                           float: right;
+                       }
+                    }
+                }
+        
+    }
+    
+    .footer{
+        position: fixed;
+        bottom: 0;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        border-top: 1px solid @gray-6;
+       .total_price{
+           display: inline-block;
+           text-align: center;
+           width:50%;
+           .total_title{
+               color: @gray-6;
+               font-size: 14px;
+           }
+           .total_value{
+               color: @red;
+               margin-left: 10px;
+           }
+       }
+       .submit_btn{
+           display: inline-block;
+           width: 50%;
+           background: @red;
+           color: @white;
+           text-align: center;
+
+           
+       }
+    }
+    .adderss_wrap{
+        position:absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: @gray-e0;
+        p{
+            padding: 0;
+            margin: 0;
+        }
+        .adderss_header{
+            position: relative;
+            border-bottom: 1px solid @gray-6;
+            background: @white;
+            .back{
+                position: absolute;
+                left: 10px;
+                top: 10px;
+
+            }
+            .adderss_title{
+                text-align: center;
+                padding: 10px 10px;
+            }
+        }
+        .adderss_content{
+            
+            .adderss_item{
+                position: relative;
+                padding: 10px 10px;
+                border-bottom: 1px solid @gray-6;
+                background: @white;
+                .adderss_radius{
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -9px;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    border: 1px solid @gray-6;
+                }
+                .active_radius{
+                    background: @red;
+                }
+                .adderss_right{
+                    margin-left: 28px; 
+                    .adderss_phone{
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.order_wrap{
+    border-bottom: 1px solid @gray-6;
+        .order_item_one{
+            position: relative;
+            border-bottom: 1px solid @gray-6;
+            img{
+                position: absolute;
+                top:10px;
+                left: 10px;
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+            }
+            .content_th_infor{
+                margin-left: 100px;
+                margin-top: 10px;
+                p{
+                    padding: 0;
+                    margin: 0;
+                }
+                .th_one{
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 10px 10px 10px 0;
+                    .th_one_name{
+                        float: left;
+                    }
+                    .th_one_price{
+                        float: right;
+                    }
+                }
+                .th_two{
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 10px 10px 10px 0;
+                    color: @gray-6;
+                    .th_two_spect{
+                        float: left;
+                    }
+                    .th_two_number{
+                        float: right;
+                    }
+                }
+                
+            }
+        }
+        .order_item_two{
+            p{  
+                margin: 0;
+                padding: 10px 10px;
+                .item_two_right{
+                    float: right;
+                }
+            }
+        }
+    }
